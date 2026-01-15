@@ -1,0 +1,19 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+dist/
+build/
+bun.lock
+yarn.lock
+
+# Env
+.env
+*.log
+
+# IDE
+.vscode/
+.idea/
