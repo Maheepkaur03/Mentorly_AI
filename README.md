@@ -186,51 +186,6 @@ The application will be available at `http://localhost:5173`
 | `/health` | GET | Detailed health check with ML status |
 | `/api/complete-analysis` | POST | Complete quiz analysis with ML predictions |
 
-### Example Request
-
-```json
-POST /api/complete-analysis
-{
-  "studentId": "student123",
-  "answers": {
-    "OS": [1, 0, 1, 1, 0],
-    "DBMS": [1, 1, 0, 1, 1],
-    "CN": [0, 1, 1, 0, 1],
-    "AI": [1, 1, 1, 0, 0],
-    "ML": [0, 0, 1, 1, 1]
-  }
-}
-```
-
-### Example Response
-
-```json
-{
-  "studentId": "student123",
-  "scores": {
-    "OS": 60.0,
-    "DBMS": 80.0,
-    "CN": 60.0,
-    "AI": 60.0,
-    "ML": 60.0
-  },
-  "averageScore": 64.0,
-  "level": "Intermediate",
-  "levelConfidence": 0.85,
-  "levelProbabilities": {
-    "Beginner": 0.1,
-    "Intermediate": 0.85,
-    "Advanced": 0.05
-  },
-  "weakSubjects": ["OS", "CN"],
-  "strongSubjects": ["DBMS"],
-  "recommendations": [...],
-  "using_ml": true
-}
-```
-
----
-
 ## 🧪 Testing
 
 ### Run Frontend Tests
@@ -264,19 +219,6 @@ npm run test:watch
 The frontend connects to the backend API at the following ports:
 - Development: `http://localhost:8000`
 - Alternative ports: `3000`, `8080`, `5173`
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
 ---
 
 ## 📄 License
@@ -285,15 +227,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 🙏 Acknowledgments
 
-- [FastAPI](https://fastapi.tiangolo.com/) - Modern Python web framework
-- [Radix UI](https://www.radix-ui.com/) - Unstyled, accessible UI components
-- [shadcn/ui](https://ui.shadcn.com/) - Re-usable component library
-- [scikit-learn](https://scikit-learn.org/) - Machine learning in Python
-
----
-
-<p align="center">
-  Made with ❤️ by the Mentorly AI Team
-</p>
