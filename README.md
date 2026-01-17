@@ -80,6 +80,7 @@
 Mentorly_AI/
 ├── 📂 backend/
 │   ├── main.py                    # FastAPI application with ML integration
+|   |__.env.example                # Gemini LLM API key 
 │   ├── requirements.txt           # Python dependencies
 │   └── 📂 models/
 │       ├── learner_classifier.pkl # Pre-trained ML classifier
@@ -226,5 +227,6 @@ The frontend connects to the backend API at the following ports:
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
+
 
 
